@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE CALCULATOR</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="header">
+            <h2><span>❤</span> Love Calculator <span>❤</span></h2>
+        </div>
+        <div class="err_box">
+            Please enter valid values
+        </div>
+        <div class="input_box">
+            <div class="form_field">
+                <label for="fname">Your Name</label>
+                <input type="text" class="fname input" placeholder="enter your name"  />
+                <!-- <span class="err1"></span> -->
+            </div>
+            <!-- <div class="form_field">❤</div> -->
+            <div class="form_field">
+                <label for="sname">Partner's Name</label>
+                <input type="text" class="sname input" placeholder="enter your partner name" />
+                <!-- <span class="err2"></span> -->
+            </div>
+            <div class="form_field">
+                <button class="btn">Calculate Love</button>
+            </div>
+        </div>
+        <!-- loader -->
+        <div class="loder_box">
+            <div class="spinner"></div>
+        </div>
+
+        <div class="result_box">
+            <div class="names">
+                <h3> <span class="firstname">firstname</span> Loves <span class="secname">Secondname</span></h3>
+            </div>
+            <div class="perc_box">
+                <div class="perc_num">
+                    <span>
+                        <span class="number">
+                            95</span>%
+                    </span>
+                </div>
+                <div class="perc">
+                    <div class="perc_fill"></div>
+                </div>
+                
+            </div>
+            <div class="text">
+                <h3>Both are made each other</h3>
+            </div>
+            <div class="back_btn">
+                <a href="#">⬅ Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

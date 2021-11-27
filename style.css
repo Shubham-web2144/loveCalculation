@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lato:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("./img/love-background-png.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  position: relative;
+  width: 360px;
+  background-color: #f1f1f1;
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.05);
+}
+.header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 2px solid pink;
+  padding-bottom: 5px;
+}
+.header h2 {
+  font-size: 2.3em;
+  font-weight: 900;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: #fa185c;
+}
+.header h2 span {
+  color: red;
+  /* animation: heart 2s infinite; */
+}
+@keyframes heart {
+  0% {
+    font-size: 1em;
+
+    /* transform: scale(1px); */
+  }
+  100% {
+    font-size: 1.04em;
+  }
+}
+.input_box {
+  position: relative;
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  /* display: none; */
+}
+.form_field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  font-family: "Dancing Script", cursive;
+}
+.form_field label {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: #f30856;
+  margin-bottom: 5px;
+}
+.input {
+  width: calc(100% - 20px);
+  height: 35px;
+  padding: 6px;
+  color: #fa185c;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.3em;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input:focus {
+  border-bottom: 2px solid #f30856;
+  border-radius: 0px;
+}
+.btn {
+  position: relative;
+  width: 190px;
+  margin: 0px auto;
+  height: 38px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #f30856;
+  font-size: 1.3em;
+  color: #f30856;
+  font-weight: 700;
+  overflow: hidden;
+}
+.btn:hover {
+  background-color: #f30856;
+  color: #f1f1f1;
+}
+.loder_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
+.active {
+  display: block;
+}
+.spinner {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  top: 45%;
+  left: 42%;
+  /* transform: translateY(-50%); */
+  border-top: 4px solid #f30856;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.result_box {
+  position: relative;
+  width: 100%;
+  display: none;
+}
+.names {
+  position: relative;
+  width: 100%;
+  margin: 8px 0px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: rgb(248, 33, 33);
+  font-size: 1em;
+}
+.names .firstname,
+.names .secname {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin: 0px 4px;
+  color: #f30856;
+}
+.perc_box {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.perc {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 13px;
+  /* margin-top: px; */
+  overflow: hidden;
+}
+.perc_fill {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(247, 12, 83), rgb(247, 26, 236));
+  text-align: right;
+  color: #ccc;
+  font-size: 1.1em;
+  transition: width 0.8s linear;
+}
+.perc_num{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.perc_num span{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.perc_num span .number{
+    font-size: 4.1em;
+    font-weight: bolder;
+    color: #f30856;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s linear;
+}
+.text{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    color: rgb(184, 11, 140);
+}
+.back_btn{
+    position: relative;
+    bottom: 0;
+    top: 10px;
+}
+.back_btn a{
+    text-decoration: none;
+    color: #111;
+}
+.err_box{
+    position: relative;
+    width: 100%;
+    background-color: rgba(255, 62, 49, 0.87);
+    padding: 12px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    text-align: center;
+    display: none;
+}
