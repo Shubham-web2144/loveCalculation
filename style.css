@@ -238,7 +238,7 @@ body {
     display: none;
 }
 
-@media only screen and (max-width: 340px){
+@media only screen and (max-width: 400px){
     .header h2{
         font-size: 1.8em;
     }
