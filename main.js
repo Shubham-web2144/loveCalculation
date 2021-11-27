@@ -57,7 +57,7 @@ backBtn.addEventListener('click', () => {
     sname.value = '';
     firstName.innerHTML = "------";
     secondName.innerHTML = "-----";
-    number.innerHTML = 0;
+    number.innerHTML = 00;
     text.innerHTML = "------------";
     percFill.style.width = 0 + "%";
 
